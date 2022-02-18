@@ -1,0 +1,164 @@
+/* 01. Sections */
+.section-title-wrap {
+  margin-bottom: 60px !important;
+}
+
+/* 01.01 About description section */
+.about-description-text .text {
+  font-size: 18px;
+  color: #696969;
+  line-height: 1.74;
+  margin-bottom: 20px;
+}
+.about-description-image img{
+    border-radius: 3%;
+}
+
+/* 01.02 Teams */
+.team-member{
+  margin-bottom: 30px;
+}
+.team-member .member-desc{
+    text-align: center;
+}
+.team-member .member-desc .title{
+    position: relative;
+    padding-top: 20px;
+}
+.team-member .member-desc .title h4{
+    display: block;
+    margin-bottom: 0;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+.team-member .member-desc .title span{
+    display: block;
+    color: #1abc9c;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 16px;
+    margin-top: 5px;
+}
+.team-member .member-desc .description{
+    margin-top: 1rem;
+    color: #696969;
+}
+
+/* 01.03 Features */
+.feature .feature-wrapper{
+  padding: 30px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+.feature .feature-wrapper .feature-header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.feature .feature-wrapper .feature-header .icon{
+  flex-shrink: 0;
+  margin-right: 10px;
+  color: #d2a98e;
+}
+.feature .feature-wrapper .feature-header .heading{
+  color: #086AD8;
+  margin-bottom: 10px;
+}
+.feature .feature-wrapper .content .text{
+  color: #696969;
+}
+.feature:hover .feature-wrapper{
+  transform: translateY(-5px);
+  background: #fff;
+  box-shadow: 0 0 40px rgba(51, 51, 51, 0.1);
+}
+/* 01.04 */
+.client{
+  margin-bottom: 30px;
+}
+.client .number{
+  font-size: 56px;
+  color: #ffffff;
+  margin-bottom: 20px;
+  line-height: 1;
+  font-weight: 700;
+}
+.client .description{
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+/* 02. Responsive */
+@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (max-width: 767px){
+    .about-description-image{
+        margin-bottom: 30px;
+    }
+}
+
+/* Buttons */
+.discover-button {
+  border-radius: 28px;
+  color: #fff;
+  display: inline-block;
+  position: relative;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: 500;
+}
+.discover-button:hover {
+  color: white !important;
+}
+.discover-button:after {
+  background: #60d4eb;
+  background: linear-gradient(
+      110deg,
+      rgba(255, 255, 255, 0) 40%,
+      rgba(235, 235, 235, 0.55),
+      rgba(255, 255, 255, 0) 62%
+    ),
+    linear-gradient(#60d4eb, #60d4eb);
+  background-size: 300% 200%;
+  background-repeat: no-repeat;
+  background-position: 100% center;
+  border: 0px solid #60d4eb;
+  border-radius: 28px;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% - 0px * 2);
+  height: calc(100% - 0px * 2);
+  z-index: -1;
+  transition: transform 0.25s cubic-bezier(0.3, 0.2, 0.5, 2), box-shadow 0.3s,
+    background 0.3s;
+  will-change: transform;
+  box-shadow: 0px 0px 10px rgba(46, 56, 107, 0.1);
+}
+.discover-button:hover:after {
+  transform: scale(1.08, 1.1);
+  box-shadow: 0px 0px 16px rgba(46, 56, 107, 0.3);
+}
+.discover-button:focus-visible:after {
+  transform: scale(1.08, 1.1);
+  box-shadow: 0px 0px 16px rgba(46, 56, 107, 0.3);
+}
+.discover-button:active:after {
+  transform: scale(0.98);
+}
+
+@keyframes btn-boop {
+  0% {
+    background-position: 100% center;
+  }
+  100% {
+    background-position: 0 center;
+  }
+}
+.discover-button.boop:after {
+  animation: btn-boop 0.33s ease-in-out;
+}
